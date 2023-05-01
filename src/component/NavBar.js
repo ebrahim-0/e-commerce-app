@@ -19,6 +19,11 @@ function NavBar() {
 
   const dispatch = useDispatch();
 
+  // const totalPrice = cart.reduce((acc, product) => {
+  //   acc += product.price * product.quantity;
+  //   return acc;
+  // }, 0);
+
   const totalPrice = cart.reduce((acc, product) => {
     acc += product.price * product.quantity;
     return acc;
@@ -38,7 +43,7 @@ function NavBar() {
           <Nav>
             <div
               onClick={handleShow}
-              className="position-relative"
+              className="position-relative mt-sm-3"
               style={{ cursor: "pointer" }}
             >
               <FontAwesomeIcon icon={faCartShopping} className="fs-3" />

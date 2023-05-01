@@ -12,8 +12,6 @@ function Slider() {
     dispatch(getProducts());
   }, []);
 
-  console.log(products);
-
   return (
     <>
       {products.length > 0 ? (
