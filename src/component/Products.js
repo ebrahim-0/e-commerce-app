@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../rtk/Slices/ProductSlice";
 import { addToCart } from "../rtk/Slices/CartSlice";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import "./Loading.css";
 
 function Products() {
   const products = useSelector((state) => state.products);
@@ -41,7 +42,14 @@ function Products() {
             );
           })
         ) : (
-          <p>no data</p>
+          <div className="loading">
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         )}
       </Row>
     </Container>
